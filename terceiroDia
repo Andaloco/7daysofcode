@@ -1,0 +1,97 @@
+<meta charset="utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jogo da carreira dev</title>
+</head>
+<body>
+<div class="container"> 
+		<div class="box">
+		
+			<h1 class="title" > Escolha sua Carreira dev </h1>
+			<h2 class="sub-title" > Vamos começar? </h2>
+			<button onclick="começar()">Clique aqui para começar</button>
+
+		</div>
+</div>
+	<div class="lista">
+		
+	</div>
+
+</body>
+</html>
+
+<style type="text/css">
+	body {
+		min-width: 100px;
+		background-image: url("https://i.pinimg.com/originals/06/7b/05/067b053de1a42410d488ee3dacafcfd6.gif");
+		 background-size:cover;
+		 background-repeat: no-repeat;
+		 padding-bottom: 20vh;
+
+	}
+
+
+	.container {
+		width:98vw;
+		height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		
+	}
+	.box {
+		width: 400px;
+		height: 300px;
+		background: #6C7A89;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border-radius: 20px;
+		box-shadow: 6px 6px 6px black;
+		margin-bottom: 60px;
+
+	}
+	button {
+		background: beige;
+		border-color: white;
+		border-radius: 10px;
+		box-shadow: 6px 6px 6px black;
+	}
+	.title {
+		font-family: "Roboto", sans-serif;
+	    border-radius: 20px;
+	}
+	.subtitle {
+	 	font-family: "Roboto", sans-serif;
+	 	margin-bottom: 90px
+	}
+</style>
+
+<script type="text/javascript">
+	
+	function começar() {
+		var area = prompt("você quer seguir na área front-end ou back-end? Responda com front ou back")
+		if (area == "front") {
+			var front = prompt("Ok, dentro do front-end você quer aprender React ou Vue ??")
+		} else if (area == "back") {
+			var back = prompt("Ok, dentro do back-end você quer aprender C# ou Java ??")
+		} else {
+			alert("você nao escolheu nenhuma área")
+			var area = prompt("você quer seguir na área front-end ou back-end? Responda com front ou back")
+		}
+		var aprender = [front, back]
+		var especializar = prompt("Agora que vc ja se escolheu uma area e uma vertente dessa area, você quer se especializar na area em que escolheu, ou estudar a outra e se tornar Fullstack ? Responda com especializar ou Fullstack") 
+
+		var tecnologias = prompt("Quais são as tecnologias que você gostaria de se especializar ? ") 
+		while (tecnologias !== "") {
+			alert("ah sim, " + tecnologias + " é muito legal de aprender")
+			var tecnologias = prompt("Quais são as tecnologias que você gostaria de se especializar ? ") 
+		}
+
+		alert("PARABENS!!!! você escolheu a area de " + area + "-end e dentro dessa area você escolheu estudar " + aprender + ". E entre se especializar ou virar Fullstack, voce escolheu: " + especializar + ".")
+
+	}
+</script>
